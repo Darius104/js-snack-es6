@@ -30,7 +30,7 @@ let students =
         grades: 48 
     },
     { 
-    name: 'Gaia', 
+        name: 'Gaia', 
         id: 145, 
         grades: 74 
     },
@@ -51,6 +51,33 @@ let students =
     }
 ];
 
+// Parte 1
+//--------------------------------------------------------
 const newArray = students.map((element, index, array) => {
-    console.log(element.name);
+    elementNameUp = element.name.toUpperCase();
+    return elementNameUp;
 });
+console.log(newArray);
+//--------------------------------------------------------
+
+// Parte 2
+//--------------------------------------------------------
+const newArray2 = [];
+students.forEach((element, index, array) => {
+    if ( element.grades > 70){
+        newArray2.push(element);
+    }
+})
+console.log(newArray2);
+//--------------------------------------------------------
+
+// Parte 3
+//--------------------------------------------------------
+const newArray3 = [];
+students.forEach((element, index, array) => {
+    if ( element.grades > 70 && element.id > 120){
+        newArray3.push(element);
+    }
+})
+console.log(newArray3);
+//--------------------------------------------------------
